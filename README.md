@@ -59,21 +59,17 @@ We model the nucleus as a sphere of mass m and charge q spinning about an axis. 
 
 The sphere has a spin angular momentum **L** (J·s) along the rotation axis. The rotating charge is a current loop, so it also has a magnetic moment **μ** (A·m²) along the same axis. The two are proportional:
 
-```latex
-\boldsymbol{\mu} = \gamma\,\mathbf{L}, \qquad \gamma_{\text{classical}} = \frac{q}{2m}
-```
+$$\boldsymbol{\mu} = \gamma\,\mathbf{L}, \qquad \gamma_{\text{classical}} = \frac{q}{2m}$$
 
 The constant γ is the gyromagnetic ratio, in rad·s⁻¹·T⁻¹, usually quoted as γ/2π in MHz/T. Because μ and L are parallel, a change of the magnetic moment is a change of angular momentum, and this link produces precession in section 4.
 
 The classical value of γ/2π for a proton is 7.62 MHz/T, whereas the measured value for ¹H is
 
-```latex
-\frac{\gamma}{2\pi} = 42.577\ \mathrm{MHz/T}, \qquad \gamma = 2.675\times 10^{8}\ \mathrm{rad\,s^{-1}\,T^{-1}}
-```
+$$\frac{\gamma}{2\pi} = 42.577\ \mathrm{MHz/T}, \qquad \gamma = 2.675\times 10^{8}\ \mathrm{rad\,s^{-1}\,T^{-1}}$$
 
 The ratio, 5.586, is the proton g-factor and accounts for the quantum nature of the spin. We keep the relation μ = γL with the measured γ and do not use the classical model beyond this point.
 
-![](image1.png){width=3.5in}
+![](media/image1.png){width=3.5in}
 
 *Figure 1, the classical model of a hydrogen nucleus.*
 
@@ -89,57 +85,43 @@ B₀ is produced by a superconducting magnet cooled with liquid helium. Scanners
 
 The torque on a moment in a field **B** is **μ** × **B**, and torque is the rate of change of angular momentum. With **L** = **μ**/γ,
 
-```latex
-\frac{d\boldsymbol{\mu}}{dt} = \gamma\,\boldsymbol{\mu}\times\mathbf{B}
-```
+$$\frac{d\boldsymbol{\mu}}{dt} = \gamma\,\boldsymbol{\mu}\times\mathbf{B}$$
 
 For a static field **B** = B₀ **z** and an initial moment **μ**(0), the solution is, with ω₀ = γB₀,
 
-```latex
-\mu_\perp(t) = \mu_\perp(0)\,e^{-i\omega_0 t}, \qquad \mu_z(t) = \mu_z(0)
-```
+$$\mu_\perp(t) = \mu_\perp(0)\,e^{-i\omega_0 t}, \qquad \mu_z(t) = \mu_z(0)$$
 
 where μ⊥ = μx + iμy is the transverse component written as a complex number. The tilt angle between **μ** and **B₀** never changes. The moment sweeps out a cone about **B₀**, clockwise as seen from +z, at the Larmor frequency
 
-```latex
-\omega_0 = \gamma B_0 \qquad\Longleftrightarrow\qquad f_0 = \frac{\gamma}{2\pi}\,B_0
-```
+$$\omega_0 = \gamma B_0 \qquad\Longleftrightarrow\qquad f_0 = \frac{\gamma}{2\pi}\,B_0$$
 
 which is independent of the tilt angle. This motion is precession. The moment does not align with the field because the torque only changes the direction of **L**, not its length. Alignment would require the moment to give up energy to its surroundings, which is relaxation (section 7).
 
 Numerically, f₀ = 42.577 MHz/T × B₀, which gives 63.87 MHz at 1.5 T, 127.73 MHz at 3 T and 298.04 MHz at 7 T. These are radio frequencies, which is why the pulses that excite the spins are called RF pulses.
 
-![](image4.png){width=3in}
+![](media/image4.png){width=3in}
 
 ## 5. Net magnetization
 
 A voxel contains a very large number of nuclei, and the scanner measures their combined effect. At thermal equilibrium the populations of the parallel and antiparallel states follow Boltzmann statistics. Because γħB₀ ≪ kT, the fractional excess of parallel spins is
 
-```latex
-\frac{N_{\uparrow}-N_{\downarrow}}{N} \approx \frac{\gamma\hbar B_0}{2kT} = 9.9\times 10^{-6} \qquad (3\ \mathrm{T},\ 310\ \mathrm{K})
-```
+$$\frac{N_{\uparrow}-N_{\downarrow}}{N} \approx \frac{\gamma\hbar B_0}{2kT} = 9.9\times 10^{-6} \qquad (3\ \mathrm{T},\ 310\ \mathrm{K})$$
 
 This is only about 10 per million, but pure water holds 6.7 × 10¹⁹ protons per mm³, so about 6.6 × 10¹⁴ spins per mm³ are net aligned. That is what makes the signal measurable.
 
 The quantity of interest is therefore the net magnetization, the total magnetic moment per unit volume (A/m):
 
-```latex
-\mathbf{M} = \frac{1}{V}\sum_{i\in V}\boldsymbol{\mu}_i
-```
+$$\mathbf{M} = \frac{1}{V}\sum_{i\in V}\boldsymbol{\mu}_i$$
 
 At equilibrium **M** points along **B₀** with magnitude
 
-```latex
-M_0 = \frac{\rho\,\gamma^2\hbar^2\,B_0}{4kT}
-```
+$$M_0 = \frac{\rho\,\gamma^2\hbar^2\,B_0}{4kT}$$
 
 M₀ is proportional to the proton density ρ, so water-rich tissue gives more signal. It is proportional to B₀, which is why higher-field scanners have more signal. For pure water at 3 T and 310 K, M₀ = 9.3 × 10⁻³ A/m.
 
 If the field is uniform over the volume, **M** obeys the same equation as a single moment, d**M**/dt = γ **M** × **B**. In B₀, the longitudinal component Mz is constant, and the transverse magnetization, written as the complex number Mxy = Mx + iMy, rotates clockwise:
 
-```latex
-M_{xy}(t) = M_{xy}(0)\,e^{-i\omega_0 t}
-```
+$$M_{xy}(t) = M_{xy}(0)\,e^{-i\omega_0 t}$$
 
 In general, the precession frequency is set by the field the spins actually experience, ω = γB. If two parts of a sample experience fields that differ by ΔB, their frequencies differ by Δω = γΔB. For example, a field offset of 0.1 ppm of B₀ at 3 T is 0.3 µT, which shifts the frequency by 12.8 Hz and accumulates a phase difference of 1.6 rad in 20 ms. This is the origin of dephasing, treated in section 8.
 
@@ -157,27 +139,21 @@ B₁ is of the order of microtesla, about 10⁻⁶ of B₀, and such a weak fiel
 
 To describe the tipping, we change to a frame that rotates about z at the RF frequency ω. In this rotating frame **B₁** is static along an axis x′, and the spins obey d**M**/dt = γ **M** × **B**eff with
 
-```latex
-\mathbf{B}_{\mathrm{eff}} = \frac{\omega_0-\omega}{\gamma}\,\hat{\mathbf{z}} + B_1\,\hat{\mathbf{x}}'
-```
+$$\mathbf{B}_{\mathrm{eff}} = \frac{\omega_0-\omega}{\gamma}\,\hat{\mathbf{z}} + B_1\,\hat{\mathbf{x}}'$$
 
 On resonance (ω = ω₀) the first term vanishes, and **M** precesses about x′ at ω₁ = γB₁. A pulse of duration τ therefore rotates **M** by the flip angle
 
-```latex
-\alpha = \gamma B_1\,\tau \qquad \left(\text{in general } \alpha = \gamma\int_0^{\tau} B_1(t)\,dt\right)
-```
+$$\alpha = \gamma B_1\,\tau \qquad \left(\text{in general } \alpha = \gamma\int_0^{\tau} B_1(t)\,dt\right)$$
 
 which does not depend on B₀. Starting from equilibrium, **M** = (0, 0, M₀),
 
-```latex
-M_z = M_0\cos\alpha, \qquad M_{y'} = M_0\sin\alpha
-```
+$$M_z = M_0\cos\alpha, \qquad M_{y'} = M_0\sin\alpha$$
 
 A 90° pulse puts all the magnetization into the transverse plane, and a 180° pulse inverts it (Mz = −M₀). The signal is proportional to M₀ sin α, which is largest at 90°.
 
 *On screen: Figure 3, snapshots of M tipping about x′ for α = 0°, 30°, 60°, 90°, plus a plot of Mz and Mxy against α (cosine and sine curves).*
 
-![Figure 3: in the rotating frame B1 rotates M about x-prime; Mz and Mxy follow cosine and sine of the flip angle](image6.png){width=6in}
+![Figure 3: in the rotating frame B1 rotates M about x-prime; Mz and Mxy follow cosine and sine of the flip angle](media/image6.png){width=6in}
 
 ## 7. Relaxation and the Bloch equations
 
@@ -185,19 +161,11 @@ After the pulse, the magnetization returns to its equilibrium value **M₀** alo
 
 Adding these two terms to the precession equation of section 5 gives the Bloch equation (Bloch, 1946):
 
-```latex
-\frac{d\mathbf{M}}{dt} = \gamma\,\mathbf{M}\times\mathbf{B} - \frac{M_x\hat{\mathbf{x}} + M_y\hat{\mathbf{y}}}{T_2} - \frac{(M_z - M_0)\,\hat{\mathbf{z}}}{T_1}
-```
+$$\frac{d\mathbf{M}}{dt} = \gamma\,\mathbf{M}\times\mathbf{B} - \frac{M_x\hat{\mathbf{x}} + M_y\hat{\mathbf{y}}}{T_2} - \frac{(M_z - M_0)\,\hat{\mathbf{z}}}{T_1}$$
 
 For a static field **B** = B₀ **z** and the magnetization right after an ideal 90° pulse, **M**(0) = (M₀, 0, 0), the solution is
 
-```latex
-\begin{aligned}
-M_x(t) &= M_0\,e^{-t/T_2}\cos(\omega_0 t) \\
-M_y(t) &= -M_0\,e^{-t/T_2}\sin(\omega_0 t) \\
-M_z(t) &= M_0\left(1 - e^{-t/T_1}\right)
-\end{aligned}
-```
+$$\begin{aligned} M_x(t) &= M_0\,e^{-t/T_2}\cos(\omega_0 t) \\ M_y(t) &= -M_0\,e^{-t/T_2}\sin(\omega_0 t) \\ M_z(t) &= M_0\left(1 - e^{-t/T_1}\right) \end{aligned}$$
 
 The transverse part rotates at ω₀ while its length decays as exp(−t/T₂), and Mz recovers as 1 − exp(−t/T₁). At t = T₁, Mz has recovered to 63% of M₀. At t = T₂, the transverse magnetization has fallen to 37% (1/e) of its initial value. In tissue T₂ < T₁.
 
@@ -213,9 +181,9 @@ These are rounded values chosen for the figures, not the result of a single stud
 
 *On screen: Figure 4, two graphs side by side. Left, Mz(t) rising to M₀ for three tissues. Right, Mxy(t) decaying, with the 1/e point marked at t = T₂. Then Figure 5, a 3D plot of the Bloch solution as a spiral. For readability, the figure uses a precession frequency far lower than a real ω₀ and exaggerates the ratio T₁/T₂.*
 
-![Figure 4: T1 recovery of Mz and T2 decay of Mxy for white matter, gray matter and CSF at 3 T](image7.png){width=6in}
+![Figure 4: T1 recovery of Mz and T2 decay of Mxy for white matter, gray matter and CSF at 3 T](media/image7.png){width=6in}
 
-![Figure 5: solution of the Bloch equations, a spiral from (M0,0,0) back to (0,0,M0)](image8.png){width=4.2in}
+![Figure 5: solution of the Bloch equations, a spiral from (M0,0,0) back to (0,0,M0)](media/image8.png){width=4.2in}
 
 ## 8. Dephasing: T₂, T₂′ and T₂\*
 
@@ -231,15 +199,13 @@ Dephasing is sorted by what a 180° pulse does to it, which defines three decay 
 
 Their rates add:
 
-```latex
-\frac{1}{T_2^*} = \frac{1}{T_2} + \frac{1}{T_2'}
-```
+$$\frac{1}{T_2^*} = \frac{1}{T_2} + \frac{1}{T_2'}$$
 
 so T₂\* is always shorter than T₂. T₂ is a property of the tissue, whereas T₂\* also depends on the shim, the voxel size and the orientation of the structure relative to B₀.
 
 *On screen: the unit-circle animation from the multi-echo video, from t = 0 to the first 180° pulse, with the net arrow in black. See Figure 6.*
 
-![Figure 6: stills from the animation at t = 0 (aligned), t = 8 ms (dephasing) and t = 20 ms (echo)](image9.png){width=4in}
+![Figure 6: stills from the animation at t = 0 (aligned), t = 8 ms (dephasing) and t = 20 ms (echo)](media/image9.png){width=4in}
 
 ## 9. The spin echo and the signal model
 
@@ -247,23 +213,19 @@ The spin echo exploits the fact that the offsets of T₂′ are constant. After 
 
 The echo amplitude therefore contains T₂ but not T₂′:
 
-```latex
-S(\mathrm{TE}) = S_0\,e^{-\mathrm{TE}/T_2}, \qquad S_0 \propto \rho\left(1 - e^{-\mathrm{TR}/T_1}\right)
-```
+$$S(\mathrm{TE}) = S_0\,e^{-\mathrm{TE}/T_2}, \qquad S_0 \propto \rho\left(1 - e^{-\mathrm{TR}/T_1}\right)$$
 
 Here S₀ collects the proton density ρ, the T₁ recovery over the repetition time TR (assuming TR ≫ TE), and a constant for coil sensitivity and receiver gain.
 
 TE is chosen by the operator, and it sets where on the decay curve we sample. For two tissues with T₂A > T₂B and equal S₀, the signal difference ΔS = S₀(e^{−TE/T₂A} − e^{−TE/T₂B}) is zero at TE = 0, peaks, and falls again as both signals vanish. The maximum is at
 
-```latex
-\mathrm{TE}_{\mathrm{opt}} = \frac{T_{2A}\,T_{2B}}{T_{2A} - T_{2B}}\,\ln\frac{T_{2A}}{T_{2B}}
-```
+$$\mathrm{TE}_{\mathrm{opt}} = \frac{T_{2A}\,T_{2B}}{T_{2A} - T_{2B}}\,\ln\frac{T_{2A}}{T_{2B}}$$
 
 which is 83 ms for T₂A = 100 ms and T₂B = 70 ms. The noise in a magnitude image does not depend on TE while the signals decrease, so the signal-to-noise ratio (SNR) falls with every millisecond. The choice of TE is therefore a trade-off between contrast and SNR.
 
 *On screen: Figure 7. Left, SA and SB with ΔS shaded and TEₒₚₜ marked. Right, ΔS (normalized), which peaks at TEₒₚₜ, and SA, which decreases monotonically.*
 
-![Figure 7: contrast between two tissues peaks at an optimal TE while SNR falls monotonically](image10.png){width=6in}
+![Figure 7: contrast between two tissues peaks at an optimal TE while SNR falls monotonically](media/image10.png){width=6in}
 
 ## 10. T₂-weighted versus quantitative T₂ imaging
 
@@ -284,29 +246,21 @@ Quantitative T₂ mapping estimates T₂, in milliseconds, in every voxel. The s
 
 A multi-echo spin echo (MESE) sequence collects several echoes after a single excitation. A 90° pulse is followed by a train of 180° refocusing pulses separated by the echo spacing ΔTE, and one echo is recorded after each pulse, at
 
-```latex
-\mathrm{TE}_n = n\,\Delta\mathrm{TE}, \qquad n = 1, 2, \dots, N
-```
+$$\mathrm{TE}_n = n\,\Delta\mathrm{TE}, \qquad n = 1, 2, \dots, N$$
 
 Because all echoes follow one excitation, S₀ is the same for every echo. The refocusing pulses are usually phase-shifted by 90° relative to the excitation (the CPMG sequence; Carr and Purcell, 1954; Meiboom and Gill, 1958), which makes the echoes robust against small errors in the 180° flip angle.
 
 The echo peaks trace out the exponential envelope e^{−t/T₂}. In each voxel the data are
 
-```latex
-S_n = S_0\,e^{-\mathrm{TE}_n / T_2} + \text{noise}
-```
+$$S_n = S_0\,e^{-\mathrm{TE}_n / T_2} + \text{noise}$$
 
 and T₂ fitting means finding the S₀ and T₂ that best explain them in the least-squares sense:
 
-```latex
-(\hat S_0, \hat T_2) = \arg\min_{S_0,\, T_2} \sum_{n=1}^{N} \left( S_n - S_0\, e^{-\mathrm{TE}_n / T_2} \right)^2
-```
+$$(\hat S_0, \hat T_2) = \arg\min_{S_0,\, T_2} \sum_{n=1}^{N} \left( S_n - S_0\, e^{-\mathrm{TE}_n / T_2} \right)^2$$
 
 There are two common ways to do this. A straight-line fit of ln Sn against TEn has slope −1/T₂. Alternatively, the exponential can be fitted directly by nonlinear least squares. With only two echoes there is a closed form,
 
-```latex
-T_2 = \frac{\mathrm{TE}_2 - \mathrm{TE}_1}{\ln\left(S_1/S_2\right)}
-```
+$$T_2 = \frac{\mathrm{TE}_2 - \mathrm{TE}_1}{\ln\left(S_1/S_2\right)}$$
 
 but more echoes average the noise and let us check that the decay is a single exponential.
 
@@ -316,7 +270,7 @@ This is all the physics we need. In the next part of the tutorial, we load a mul
 
 *On screen: Figure 8, the multi-echo timing diagram with the echo train, and a fit curve through the echo amplitudes in one voxel. Then cut to the qMRLab window.*
 
-![Figure 8: multi-echo timing diagram and a mono-exponential fit through the echo amplitudes](image11.png){width=5.5in}
+![Figure 8: multi-echo timing diagram and a mono-exponential fit through the echo amplitudes](media/image11.png){width=5.5in}
 
 ## Sources
 
