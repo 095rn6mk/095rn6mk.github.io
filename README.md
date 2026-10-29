@@ -69,7 +69,7 @@ $$\frac{\gamma}{2\pi} = 42.577\ \mathrm{MHz/T}, \qquad \gamma = 2.675\times 10^{
 
 The ratio, 5.586, is the proton g-factor and accounts for the quantum nature of the spin. We keep the relation μ = γL with the measured γ and do not use the classical model beyond this point.
 
-![](media/image1.png){width=3.5in}
+![](/classical_spin_model.svg){width=3.5in}
 
 *Figure 1, the classical model of a hydrogen nucleus.*
 
@@ -99,7 +99,7 @@ which is independent of the tilt angle. This motion is precession. The moment do
 
 Numerically, f₀ = 42.577 MHz/T × B₀, which gives 63.87 MHz at 1.5 T, 127.73 MHz at 3 T and 298.04 MHz at 7 T. These are radio frequencies, which is why the pulses that excite the spins are called RF pulses.
 
-![](media/image4.png){width=3in}
+![](/rotating_moment.svg){width=3in}
 
 ## 5. Net magnetization
 
@@ -153,7 +153,7 @@ A 90° pulse puts all the magnetization into the transverse plane, and a 180° p
 
 *On screen: Figure 3, snapshots of M tipping about x′ for α = 0°, 30°, 60°, 90°, plus a plot of Mz and Mxy against α (cosine and sine curves).*
 
-![Figure 3: in the rotating frame B1 rotates M about x-prime; Mz and Mxy follow cosine and sine of the flip angle](media/image6.png){width=6in}
+![Figure 3: in the rotating frame B1 rotates M about x-prime; Mz and Mxy follow cosine and sine of the flip angle](/image6.png){width=6in}
 
 ## 7. Relaxation and the Bloch equations
 
@@ -181,9 +181,9 @@ These are rounded values chosen for the figures, not the result of a single stud
 
 *On screen: Figure 4, two graphs side by side. Left, Mz(t) rising to M₀ for three tissues. Right, Mxy(t) decaying, with the 1/e point marked at t = T₂. Then Figure 5, a 3D plot of the Bloch solution as a spiral. For readability, the figure uses a precession frequency far lower than a real ω₀ and exaggerates the ratio T₁/T₂.*
 
-![Figure 4: T1 recovery of Mz and T2 decay of Mxy for white matter, gray matter and CSF at 3 T](media/image7.png){width=6in}
+![Figure 4: T1 recovery of Mz and T2 decay of Mxy for white matter, gray matter and CSF at 3 T](/image7.png){width=6in}
 
-![Figure 5: solution of the Bloch equations, a spiral from (M0,0,0) back to (0,0,M0)](media/image8.png){width=4.2in}
+![Figure 5: solution of the Bloch equations, a spiral from (M0,0,0) back to (0,0,M0)](/image8.png){width=4.2in}
 
 ## 8. Dephasing: T₂, T₂′ and T₂\*
 
@@ -205,7 +205,7 @@ so T₂\* is always shorter than T₂. T₂ is a property of the tissue, whereas
 
 *On screen: the unit-circle animation from the multi-echo video, from t = 0 to the first 180° pulse, with the net arrow in black. See Figure 6.*
 
-![Figure 6: stills from the animation at t = 0 (aligned), t = 8 ms (dephasing) and t = 20 ms (echo)](media/image9.png){width=4in}
+![Figure 6: stills from the animation at t = 0 (aligned), t = 8 ms (dephasing) and t = 20 ms (echo)](/image9.png){width=4in}
 
 ## 9. The spin echo and the signal model
 
@@ -225,7 +225,7 @@ which is 83 ms for T₂A = 100 ms and T₂B = 70 ms. The noise in a magnitude im
 
 *On screen: Figure 7. Left, SA and SB with ΔS shaded and TEₒₚₜ marked. Right, ΔS (normalized), which peaks at TEₒₚₜ, and SA, which decreases monotonically.*
 
-![Figure 7: contrast between two tissues peaks at an optimal TE while SNR falls monotonically](media/image10.png){width=6in}
+![Figure 7: contrast between two tissues peaks at an optimal TE while SNR falls monotonically](/image10.png){width=6in}
 
 ## 10. T₂-weighted versus quantitative T₂ imaging
 
@@ -270,7 +270,7 @@ This is all the physics we need. In the next part of the tutorial, we load a mul
 
 *On screen: Figure 8, the multi-echo timing diagram with the echo train, and a fit curve through the echo amplitudes in one voxel. Then cut to the qMRLab window.*
 
-![Figure 8: multi-echo timing diagram and a mono-exponential fit through the echo amplitudes](media/image11.png){width=5.5in}
+![Figure 8: multi-echo timing diagram and a mono-exponential fit through the echo amplitudes](/image11.png){width=5.5in}
 
 ## Sources
 
